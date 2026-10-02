@@ -1,0 +1,225 @@
+:root {
+  --primary-color: #361f15;
+  --secondary-color: #bd532b;
+  --accent1-color: #5a452b;
+  --accent2-color: #f3d79b;
+  --heading-font: "Acme", sans-serif;
+  --paragraph-font: "Nunito", sans-serif;
+  --level-counter-height: 170px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--paragraph-font);
+}
+main {
+  margin: 0;
+  padding: 0;
+}
+.level-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.level-board label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.player-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.player-adder h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: var(--heading-font);
+}
+.player-buttons button {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: white;
+}
+#combatCalculator {
+  max-width: 30%;
+  padding: 0;
+  border: 0;
+}
+.combat-button-contents {
+  position: relative;
+  width: 100%;
+}
+.combat-button-contents h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: var(--heading-font);
+  margin: 0;
+  padding: 0;
+}
+.combat-button-contents img {
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  height: auto;
+  border-radius: 5px;
+}
+
+#top-row {
+  transform: rotate(180deg);
+  position: absolute;
+  top: 0;
+  left: var(--level-counter-height);
+  width: calc(100vw - var(--level-counter-height) * 2);
+  display: flex;
+  justify-content: space-around;
+}
+#bottom-row {
+  position: absolute;
+  bottom: 0;
+  left: var(--level-counter-height);
+  width: calc(100vw - var(--level-counter-height) * 2);
+  display: flex;
+  justify-content: space-around;
+}
+#right-column {
+  transform: translateY(-100%) rotate(-90deg);
+  transform-origin: bottom right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+#left-column {
+  transform: translateY(-100%) rotate(90deg);
+  transform-origin: bottom left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+.level-counter {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  padding: 10px;
+  gap: 20px;
+  align-items: center;
+  width: 120px;
+  height: var(--level-counter-height);
+  justify-content: space-around;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  touch-action: none;
+}
+.level-counter button {
+  padding: 2px 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+.level-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+.level-display {
+  border: 2px solid black;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+span {
+  line-height: 10px;
+}
+
+.combat-calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+.combat-calculator h2 {
+  margin-top: 0;
+  font-family: var(--heading-font);
+  text-align: center;
+}
+.combat-calculator input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.combat-calculator button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: white;
+  max-width: 70px;
+}
+.combat-inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.plus-buttons,
+.minus-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.combat-buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.player-calculator,
+.monster-calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

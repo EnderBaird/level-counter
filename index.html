@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Level Counter</title>
+  <meta name="description" content="An aplication to keep track of levels and bonuses while playing Munchkin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.icns" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <main class="level-board">
+    <div class="player-adder">
+      <h1>Players</h1>
+      <div class="player-buttons">
+        <button id="addPlayer">+</button>
+        <button id="removePlayer">-</button>
+      </div>
+    </div>
+    <button id="combatCalculator">
+      <div class="combat-button-contents">
+        <h2>Combat</h2>
+        <img src="./images/center-board.png" alt="a munchkin level board" />
+      </div>
+    </button>
+  </main>
+  <div id="bottom-row"></div>
+  <div id="top-row"></div>
+  <div id="left-column"></div>
+  <div id="right-column"></div>
+  <dialog class="combat-calculator">
+    <button id="closeCalculator">X</button>
+    <h2>Combat Calculator</h2>
+    <div class="combat-inputs">
+      <div class="player-calculator">
+        <h3>Player</h3>
+        <label for="player-combat">Combat Ability</label>
+        <input type="number" class="player-combat" placeholder="Combat Ability" />
+        <div class="combat-buttons">
+          <div class="plus-buttons">
+            <button id="player-plus5">+5</button>
+            <button id="player-plus4">+4</button>
+            <button id="player-plus3">+3</button>
+            <button id="player-plus2">+2</button>
+            <button id="player-plus1">+1</button>
+          </div>
+          <div class="minus-buttons">
+            <button id="player-minus5">-5</button>
+            <button id="player-minus4">-4</button>
+            <button id="player-minus3">-3</button>
+            <button id="player-minus2">-2</button>
+            <button id="player-minus1">-1</button>
+          </div>
+        </div>
+      </div>
+      <div class="monster-calculator">
+        <h3>Monster</h3>
+        <label for="monster-combat">Monster Size</label>
+        <input type="number" class="monster-combat" placeholder="Monster Size" />
+        <div class="combat-buttons">
+          <div class="plus-buttons">
+            <button id="monster-plus5">+5</button>
+            <button id="monster-plus4">+4</button>
+            <button id="monster-plus3">+3</button>
+            <button id="monster-plus2">+2</button>
+            <button id="monster-plus1">+1</button>
+          </div>
+          <div class="minus-buttons">
+            <button id="monster-minus5">-5</button>
+            <button id="monster-minus4">-4</button>
+            <button id="monster-minus3">-3</button>
+            <button id="monster-minus2">-2</button>
+            <button id="monster-minus1">-1</button>
+          </div>
+        </div>
+      </div>
+  </dialog>
+</body>
+
+</html>
